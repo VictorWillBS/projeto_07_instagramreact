@@ -1,13 +1,5 @@
+
 import ReactDom from "react-dom";
-import NavBarr from "./NavBarr";
-import Body from "./Body";
-function App(){
-    return(
-        <div>
-            <NavBarr/>
-            <Body/>
-        </div>
-    )
-}
+import App from "./App"
 
 ReactDom.render(<App/>, document.querySelector(".root"))

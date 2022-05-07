@@ -2,6 +2,14 @@ const sugestaoImage = ["assets/img/bad.vibes.memes.svg","assets/img/chibirdart.s
 const sugestaoName = ["bad.vibes.memes","chibirdart", "razoesparaacreditar","adorable_animals","smallcutecats"]
 const sugestaoRazao = ["Segue você","Novo no Instagram"]
 
+const arrSugestao = [
+    {image:sugestaoImage[0], name:sugestaoName[0], razao:sugestaoRazao[0]},
+    {image:sugestaoImage[1], name:sugestaoName[1], razao:sugestaoRazao[1]},
+    {image:sugestaoImage[2], name:sugestaoName[2], razao:sugestaoRazao[0]},
+    {image:sugestaoImage[3], name:sugestaoName[3], razao:sugestaoRazao[0]},
+    {image:sugestaoImage[4], name:sugestaoName[4], razao:sugestaoRazao[0]},
+]
+
 function Sugestao(props){
     return(
         <div class="sugestao">
@@ -26,11 +34,7 @@ export default function Sugestoes(){
                     Sugestões para você
                     <div>Ver tudo</div>
                     </div>
-                    <Sugestao image={sugestaoImage[0]} name={sugestaoName[0]} razao={sugestaoRazao[0]}/>
-                    <Sugestao image={sugestaoImage[1]} name={sugestaoName[1]} razao={sugestaoRazao[0]}/>
-                    <Sugestao image={sugestaoImage[2]} name={sugestaoName[2]} razao={sugestaoRazao[1]}/>
-                    <Sugestao image={sugestaoImage[3]} name={sugestaoName[3]} razao={sugestaoRazao[0]}/>
-                    <Sugestao image={sugestaoImage[4]} name={sugestaoName[4]} razao={sugestaoRazao[0]}/>
+                    {arrSugestao.map(item=> <Sugestao image={item.image} name={item.name} razao={item.razao} />)}
     
                 </div>
             </div>

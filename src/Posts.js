@@ -5,6 +5,12 @@ const curtidaImg = ["assets/img/respondeai.svg", "assets/img/adorable_animals.sv
 const lastCurtida = ["respondeai","adorable_animals"]
 const outrasCurtidas = ["outras 101.523 pessoas", "outras 99.159 pessoas"]
 
+const arrPost=[
+{ imagem:imgUser[0],nome:userName[0], postImg:imgPost[0], lastCurtidaImg:curtidaImg[0], lastCurtidaNome:lastCurtida[0], outrasCurtidasTxt:outrasCurtidas[0]},
+{ imagem:imgUser[1], nome:userName[1], postImg:imgPost[1], lastCurtidaImg:curtidaImg[1], lastCurtidaNome:lastCurtida[1],outrasCurtidasTxt:outrasCurtidas[1]}
+]
+
+
 function Topo (props){
     return (
         <div class="topo">
@@ -67,23 +73,13 @@ function Post(props){
 export default function Posts(){
     return (
         <div class="posts">
-       
-       <Post 
-       imageUser={imgUser[0]} 
-       userName={userName[0]} 
-       imagePost={imgPost[0]} 
-       imageCurtida={curtidaImg[0]} 
-       curtidaUser={lastCurtida[0]}
-       outrasCurtidasTxt={outrasCurtidas[0]}
-       />
-       <Post 
-       imageUser={imgUser[1]} 
-       userName={userName[1]} 
-       imagePost={imgPost[1]} 
-       imageCurtida={curtidaImg[1]}  
-       curtidaUser={lastCurtida[1]}
-       outrasCurtidasTxt={outrasCurtidas[1]}
-       />
+       {arrPost.map(item=><Post 
+        imageUser={item.imagem}
+        userName={item.nome}
+        imagePost={item.postImg}
+        imageCurtida={item.lastCurtidaImg}
+        curtidaUser={item.lastCurtidaNome}
+        outrasCurtidasTxt={item.outrasCurtidasTxt} />)}
       </div>
     )
 }

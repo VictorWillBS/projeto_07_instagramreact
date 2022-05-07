@@ -1,12 +1,16 @@
 import Sugestoes from "./Sugestoes"
+const userName=["catanacomics"]
+const name = ["Catana"]
 
-function Usuario(){
+const arrUsuario=[{userName:"catanacomics", name:"Catana"}]
+
+function Usuario(props){
     return(
             <div class="usuario">
                 <img src="assets/img/catanacomics.svg" />
                 <div class="texto">
-                <strong>catanacomics</strong>
-                Catana
+                <strong>{props.userName}</strong>
+                {props.name}
                 </div>
             </div>
     )
@@ -14,7 +18,7 @@ function Usuario(){
 export default function SideBarr(){
     return(
         <div class="sidebar">
-          <Usuario/>
+         {arrUsuario.map(item=> <Usuario userName={item.userName} name={item.name}/>)}
 
           <Sugestoes/>
 
