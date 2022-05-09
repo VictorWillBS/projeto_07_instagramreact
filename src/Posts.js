@@ -1,15 +1,10 @@
-const imgUser = ["assets/img/meowed.svg", "assets/img/barked.svg"];
-const userName = ["meowed","barked"];
-const imgPost =["assets/img/gato-telefone.svg","assets/img/dog.svg"]
-const curtidaImg = ["assets/img/respondeai.svg", "assets/img/adorable_animals.svg"]
-const lastCurtida = ["respondeai","adorable_animals"]
-const outrasCurtidas = ["outras 101.523 pessoas", "outras 99.159 pessoas"]
+import React from "react"
 
 const arrPost=[
-{ imagem:imgUser[0],nome:userName[0], postImg:imgPost[0], lastCurtidaImg:curtidaImg[0], lastCurtidaNome:lastCurtida[0], outrasCurtidasTxt:outrasCurtidas[0]},
-{ imagem:imgUser[1], nome:userName[1], postImg:imgPost[1], lastCurtidaImg:curtidaImg[1], lastCurtidaNome:lastCurtida[1],outrasCurtidasTxt:outrasCurtidas[1]}
-]
+{ imagem:"assets/img/meowed.svg",nome:"meowed", postImg:"assets/img/gato-telefone.svg", lastCurtidaImg:"assets/img/respondeai.svg", lastCurtidaNome:"respondeai", outrasCurtidasTxt:"outras 101.523 pessoas"},
 
+{ imagem:"assets/img/barked.svg", nome:"barked", postImg:"assets/img/dog.svg", lastCurtidaImg: "assets/img/adorable_animals.svg", lastCurtidaNome:"adorable_animals",outrasCurtidasTxt:"outras 99.159 pessoas"}
+]
 
 function Topo (props){
     return (
@@ -32,11 +27,30 @@ function Conteudo(props){
 }
 
 function Fundo(props){
+    //logic
+    const coracao_Inicial ="heart-outline";
+    const coracao_Curtido= "heart";
+    const class_Curtido= "coracaoCurtido";
+    const class_Inicial= "coracaoInicial";
+    const [coracao,setCoracao]= React.useState(coracao_Inicial);
+    const [classCoracao,setClassCoracao] =React.useState(class_Inicial)
+
+    function alterarCoracao(){
+        if(coracao===coracao_Inicial){
+            setCoracao(coracao_Curtido)
+            setClassCoracao(class_Curtido)
+        } else{
+            setCoracao(coracao_Inicial)
+            setClassCoracao(class_Inicial)
+        }
+    }
+
+    //UI
     return(
         <div class="fundo">
             <div class="acoes">
                 <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name={coracao} id={classCoracao} onClick={alterarCoracao} ></ion-icon>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>

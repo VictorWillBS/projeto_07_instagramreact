@@ -1,16 +1,12 @@
-const storyImage=["assets/img/9gag.svg" ,"assets/img/meowed.svg","assets/img/barked.svg","assets/img/nathanwpylestrangeplanet.svg","assets/img/wawawicomics.svg","assets/img/respondeai.svg","assets/img/filomoderna.svg","assets/img/memeriagourmet.svg"]
-
-const userName=[ "9gag","meowed","barked","nathanwpylestrangeplanet","wawawicomics","respondeai", "filomoderna","memeriagourmet"]
-
 const arrStories=[
-{image : storyImage[0],  name: userName[0]},
-{image : storyImage[1],  name: userName[1]},
-{image : storyImage[2],  name: userName[2]},
-{image : storyImage[3],  name: userName[3]},
-{image : storyImage[4],  name: userName[4]},
-{image : storyImage[5],  name: userName[5]},
-{image : storyImage[6],  name: userName[6]},
-{image : storyImage[7],  name: userName[7]},
+{image : "assets/img/9gag.svg",  name: "9gag"},
+{image : "assets/img/meowed.svg",  name: "meowed"},
+{image : "assets/img/barked.svg",  name: "barked"},
+{image : "assets/img/nathanwpylestrangeplanet.svg",  name:"nathanwpylestrangeplanet"},
+{image : "assets/img/wawawicomics.svg",  name: "wawawicomics"},
+{image : "assets/img/respondeai.svg",  name:"respondeai"},
+{image : "assets/img/filomoderna.svg",  name:"filomoderna"},
+{image : "assets/img/memeriagourmet.svg",  name:"memeriagourmet"},
 ]
 
 console.log(arrStories)

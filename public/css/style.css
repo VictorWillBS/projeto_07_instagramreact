@@ -180,6 +180,14 @@ body {
   cursor: pointer;
 }
 
+#coracaoInicial{
+  color:initial
+}
+
+#coracaoCurtido{
+  color: red ;
+}
+
 .post .conteudo img {
   width: 100%;
 }

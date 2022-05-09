@@ -1,13 +1,10 @@
-const sugestaoImage = ["assets/img/bad.vibes.memes.svg","assets/img/chibirdart.svg", "assets/img/razoesparaacreditar.svg","assets/img/adorable_animals.svg", "assets/img/smallcutecats.svg"]
-const sugestaoName = ["bad.vibes.memes","chibirdart", "razoesparaacreditar","adorable_animals","smallcutecats"]
-const sugestaoRazao = ["Segue você","Novo no Instagram"]
 
 const arrSugestao = [
-    {image:sugestaoImage[0], name:sugestaoName[0], razao:sugestaoRazao[0]},
-    {image:sugestaoImage[1], name:sugestaoName[1], razao:sugestaoRazao[1]},
-    {image:sugestaoImage[2], name:sugestaoName[2], razao:sugestaoRazao[0]},
-    {image:sugestaoImage[3], name:sugestaoName[3], razao:sugestaoRazao[0]},
-    {image:sugestaoImage[4], name:sugestaoName[4], razao:sugestaoRazao[0]},
+    {image:"assets/img/bad.vibes.memes.svg", name:"bad.vibes.memes", razao:"Segue você"},
+    {image:"assets/img/chibirdart.svg", name:"chibirdart", razao:"Novo no Instagram"},
+    {image:"assets/img/razoesparaacreditar.svg", name:"razoesparaacreditar", razao:"Segue você"},
+    {image:"assets/img/adorable_animals.svg", name:"adorable_animals", razao:"Segue você"},
+    {image:"assets/img/smallcutecats.svg", name:"smallcutecats", razao:"Segue você"},
 ]
 
 function Sugestao(props){
